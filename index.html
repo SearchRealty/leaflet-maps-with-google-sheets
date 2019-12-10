@@ -68,12 +68,16 @@
   <table id="maptable" class="display"></table>
 
   <script type="text/javascript">
-var map = L.map('map');
-var myRenderer = L.canvas({ padding: 0.5 });
-var circleMarker = L.circleMarker(latLng, {
-    renderer: myRenderer,
-    color: '#3388ff'
-}).addTo(map);
+    var map = L.map('map', {
+      attributionControl: false,
+      zoomControl: false,
+      scrollWheelZoom: false
+    }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
+    var map = L.map('map', {
+      attributionControl: false,
+      zoomControl: false,
+      scrollWheelZoom: false
+    }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
   </script>
 
   <script type="text/javascript" src="google-doc-url.js"></script>
